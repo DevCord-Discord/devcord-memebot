@@ -13,10 +13,6 @@ reddit = praw.Reddit(client_id = os.environ["CLIENT_ID"],
 class Client(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-        
-    @commands.command()
-    async def clear(self, ctx, amount = 10000000):
-        await ctx.channel.purge(limit=amount)
 
     @commands.command
     async def help(self, ctx):
