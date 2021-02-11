@@ -21,11 +21,6 @@ class Client(commands.Cog):
         embed.add_field(name="help", value="shows the commands to my guy")
         await ctx.send(content=None, embed=embed)
 
-    @commands.command(aliases=['hey'])
-    async def chat(self, ctx, query: str):
-        predicted_sentence, _, _, _ = talk.Chatbot().reply(query)
-        await ctx.send(''.join(predicted_sentence))
-
     @commands.command()
     async def meme(self, ctx):
         rnd = randint(0,5)
