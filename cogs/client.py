@@ -3,7 +3,6 @@ import praw
 import discord
 from random import randint, choice
 from discord.ext import commands
-from cogs.chatbot import talk
 
 client = commands.Bot(command_prefix="!")
 
