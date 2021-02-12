@@ -13,7 +13,6 @@ class Bot(commands.AutoShardedBot):
         self.in_character = defaultdict(lambda: defaultdict(str))
 
         packages = [
-            'cogs.getinfo',
             'cogs.client',
         ]
 
