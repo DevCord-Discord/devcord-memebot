@@ -23,7 +23,8 @@ class Client(commands.Cog):
     @commands.command()
     async def meme(self, ctx):
         rnd = randint(0,5)
-        subreddit = choice(["memes", "dankmemes", "linuxmemes", "programmerhumour", "masterhacker"])
+        subreddit = choice(["memes", "dankmemes", "linuxmemes", "programmerhumour", "masterhacker", "MemeEconomy",
+                           "wholesomememes", "me_irl", "PewdiepieSubmissions"])
         memes = reddit.subreddit(subreddit).new(limit=7)
         post = [p for p in memes if not p.stickied][rnd]
         embed = discord.Embed(description=post.title , color=randint(0, 0xFFFFFF), title=f"Memes for my guy")
